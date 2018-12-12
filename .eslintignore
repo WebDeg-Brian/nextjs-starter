@@ -1,0 +1,8 @@
+# Git
+/.git
+
+# Next.js
+/.next
+
+# Dependencies
+/node_modules

@@ -1,0 +1,10 @@
+# Code editor
+/.vscode
+
+# Dependencies
+/node_modules
+
+# Next.js
+/.next
+
+# Misc
