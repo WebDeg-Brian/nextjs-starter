@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { createStore } from 'redux';
-import rootReducer from '../root-controllers';
+import combinedReducer from '../combinedReducer';
 
-const initializeStore = () => createStore(rootReducer);
+const initializeStore = () => createStore(combinedReducer);
 const isServer = !process.browser;
 const getStore = () => {
   if (isServer) {

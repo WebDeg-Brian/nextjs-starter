@@ -5,22 +5,9 @@ import {
   GET_MOBILE_INFO,
   GET_OS_INFO,
 } from './rootTypes';
-import { combineReducers } from 'redux';
+import rootInitialState from './rootInitialState';
 
-const appState = {
-  viewportWidth: null,
-  viewportHeight: null,
-  browserName: null,
-  browserVersion: null,
-  engineName: null,
-  engineVersion: null,
-  mobileVendor: null,
-  mobileModel: null,
-  OSName: null,
-  OSVersion: null,
-};
-
-const app = (state = appState, action) => {
+export default (state = rootInitialState, action) => {
   switch (action.type) {
     case UPDATE_VIEWPORT_DIMENSIONS:
       return {
@@ -33,6 +20,7 @@ const app = (state = appState, action) => {
         ...state,
         browserName: action.browserName,
         browserVersion: action.browserVersion,
+        fullBrowserVersion: action.fullBrowserVersion,
       };
     case GET_ENGINE_INFO:
       return {
@@ -56,7 +44,3 @@ const app = (state = appState, action) => {
       return state;
   }
 };
-
-export default combineReducers({
-  app,
-});
