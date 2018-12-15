@@ -6,13 +6,6 @@ import {
   getMobileInfo,
   getOSInfo,
 } from './rootActions';
-import {
-  UPDATE_VIEWPORT_DIMENSIONS,
-  GET_BROWSER_INFO,
-  GET_ENGINE_INFO,
-  GET_MOBILE_INFO,
-  GET_OS_INFO,
-} from './rootTypes';
 
 const store = configureStore()();
 
