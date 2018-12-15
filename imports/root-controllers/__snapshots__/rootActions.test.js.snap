@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check if actions return correct payloads getBrowserInfo 1`] = `
+Array [
+  Object {
+    "browserName": "Firefox",
+    "browserVersion": "63.0",
+    "fullBrowserVersion": "63.0.1",
+    "type": "GET_BROWSER_INFO",
+  },
+]
+`;
+
+exports[`Check if actions return correct payloads getEngineInfo 1`] = `
+Array [
+  Object {
+    "engineName": "Gecko",
+    "engineVersion": "1.8.1",
+    "type": "GET_ENGINE_INFO",
+  },
+]
+`;
+
+exports[`Check if actions return correct payloads getMobileInfo 1`] = `
+Array [
+  Object {
+    "mobileModel": "iPhone 6s Plus",
+    "mobileVendor": "Apple",
+    "type": "GET_MOBILE_INFO",
+  },
+]
+`;
+
+exports[`Check if actions return correct payloads getOSInfo 1`] = `
+Array [
+  Object {
+    "OSName": "Windows",
+    "OSVersion": "8.1",
+    "type": "GET_OS_INFO",
+  },
+]
+`;
+
+exports[`Check if actions return correct payloads updateViewportDimensions 1`] = `
+Array [
+  Object {
+    "newHeight": 512,
+    "newWidth": 1024,
+    "type": "UPDATE_VIEWPORT_DIMENSIONS",
+  },
+]
+`;

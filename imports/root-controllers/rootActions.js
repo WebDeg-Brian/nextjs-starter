@@ -11,10 +11,10 @@ export const updateViewportDimensions = (newWidth, newHeight) => ({
     newWidth,
     newHeight,
   }),
-  getBrowserInfo = (browserName, broswerVersion, fullBrowserVersion) => ({
+  getBrowserInfo = (browserName, browserVersion, fullBrowserVersion) => ({
     type: GET_BROWSER_INFO,
     browserName,
-    broswerVersion,
+    browserVersion,
     fullBrowserVersion,
   }),
   getEngineInfo = (engineName, engineVersion) => ({
