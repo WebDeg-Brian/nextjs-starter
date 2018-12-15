@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { createStore } from 'redux';
 import combinedReducer from '../combinedReducer';
+import getDisplayName from './getDisplayName';
 
 const initializeStore = () => createStore(combinedReducer);
 const isServer = !process.browser;
@@ -16,7 +17,7 @@ const getStore = () => {
   return window.__GLOBAL_STORE__;
 };
 
-export default App =>
+export default App => {
   class withRedux extends Component {
     static async getInitialProps(appContext) {
       const store = getStore();
@@ -38,4 +39,9 @@ export default App =>
     render() {
       return <App {...this.props} store={this.store} />;
     }
-  };
+  }
+
+  withRedux.displayName = getDisplayName('withRedux', App);
+
+  return withRedux;
+};

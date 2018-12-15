@@ -13,6 +13,7 @@ import {
 } from 'react-device-detect';
 import { rootActions } from '../root-controllers';
 import { connect } from 'react-redux';
+import getDisplayName from './getDisplayName';
 
 export default Page => {
   class withInitialState extends Component {
@@ -45,6 +46,8 @@ export default Page => {
     getOSInfo: PropTypes.func.isRequired,
     updateViewportDimensions: PropTypes.func.isRequired,
   };
+
+  withInitialState.displayName = getDisplayName('withInitialState', Page);
 
   return connect(
     null,
