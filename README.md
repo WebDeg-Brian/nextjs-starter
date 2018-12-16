@@ -4,20 +4,32 @@ Don't waste your time configuring and managing your project. Get started straigh
 
 ## Getting started
 
-1. Clone the repository:
+Follow the steps to get started:
+
+- Clone the repository:
 
 ```bash
   git clone https://github.com/WebDeg-Brian/nextjs-starter.git <name of your project>
 ```
 
-2. Install the dependencies:
+- Install the dependencies:
 
 ```bash
   npm install
-```     
+```
 
-3. Remove `.git` folder
-4. Tweak `package.json` to your likings
+- Remove `.git` folder
+- Initialise a new `.git` folder
+- Tweak `package.json` to your likings
+- Run the dev server and start developing straight away!
+
+## Available commands:
+
+- `npm run dev`: Start the dev server
+- `npm run build`: Build the codebase for production
+- `npm start`: Start the application in production mode
+- `npm run test`: Run all the tests
+- `npm run test:watch`: Run all the tests in watch mode
 
 ## Dependencies
 
