@@ -1,5 +1,165 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[` 1`] = `
+Object {
+  "OSName": null,
+  "OSVersion": null,
+  "browserName": null,
+  "browserVersion": null,
+  "engineName": null,
+  "engineVersion": null,
+  "fullBrowserVersion": null,
+  "mobileModel": null,
+  "mobileVendor": null,
+  "viewportHeight": null,
+  "viewportWidth": null,
+}
+`;
+
+exports[` 2`] = `
+Object {
+  "OSName": null,
+  "OSVersion": null,
+  "browserName": null,
+  "browserVersion": null,
+  "engineName": null,
+  "engineVersion": null,
+  "fullBrowserVersion": null,
+  "mobileModel": null,
+  "mobileVendor": null,
+  "viewportHeight": 512,
+  "viewportWidth": 1024,
+}
+`;
+
+exports[` 3`] = `
+Object {
+  "OSName": null,
+  "OSVersion": null,
+  "browserName": "Firefox",
+  "browserVersion": "63.0",
+  "engineName": null,
+  "engineVersion": null,
+  "fullBrowserVersion": "63.0.1",
+  "mobileModel": null,
+  "mobileVendor": null,
+  "viewportHeight": null,
+  "viewportWidth": null,
+}
+`;
+
+exports[` 4`] = `
+Object {
+  "OSName": null,
+  "OSVersion": null,
+  "browserName": null,
+  "browserVersion": null,
+  "engineName": "Gecko",
+  "engineVersion": "1.8.1",
+  "fullBrowserVersion": null,
+  "mobileModel": null,
+  "mobileVendor": null,
+  "viewportHeight": null,
+  "viewportWidth": null,
+}
+`;
+
+exports[` 5`] = `
+Object {
+  "OSName": null,
+  "OSVersion": null,
+  "browserName": null,
+  "browserVersion": null,
+  "engineName": null,
+  "engineVersion": null,
+  "fullBrowserVersion": null,
+  "mobileModel": "iPhone 6s Plus",
+  "mobileVendor": "Apple",
+  "viewportHeight": null,
+  "viewportWidth": null,
+}
+`;
+
+exports[` 6`] = `
+Object {
+  "OSName": "Windows",
+  "OSVersion": "8.1",
+  "browserName": null,
+  "browserVersion": null,
+  "engineName": null,
+  "engineVersion": null,
+  "fullBrowserVersion": null,
+  "mobileModel": null,
+  "mobileVendor": null,
+  "viewportHeight": null,
+  "viewportWidth": null,
+}
+`;
+
+exports[`Check if the state is mutated correctly GET_BROWSER_INFO 1`] = `
+Object {
+  "OSName": null,
+  "OSVersion": null,
+  "browserName": "Firefox",
+  "browserVersion": "63.0",
+  "engineName": null,
+  "engineVersion": null,
+  "fullBrowserVersion": "63.0.1",
+  "mobileModel": null,
+  "mobileVendor": null,
+  "viewportHeight": null,
+  "viewportWidth": null,
+}
+`;
+
+exports[`Check if the state is mutated correctly GET_ENGINE_INFO 1`] = `
+Object {
+  "OSName": null,
+  "OSVersion": null,
+  "browserName": null,
+  "browserVersion": null,
+  "engineName": "Gecko",
+  "engineVersion": "1.8.1",
+  "fullBrowserVersion": null,
+  "mobileModel": null,
+  "mobileVendor": null,
+  "viewportHeight": null,
+  "viewportWidth": null,
+}
+`;
+
+exports[`Check if the state is mutated correctly GET_MOBILE_INFO 1`] = `
+Object {
+  "OSName": null,
+  "OSVersion": null,
+  "browserName": null,
+  "browserVersion": null,
+  "engineName": null,
+  "engineVersion": null,
+  "fullBrowserVersion": null,
+  "mobileModel": "iPhone 6s Plus",
+  "mobileVendor": "Apple",
+  "viewportHeight": null,
+  "viewportWidth": null,
+}
+`;
+
+exports[`Check if the state is mutated correctly GET_OS_INFO 1`] = `
+Object {
+  "OSName": "Windows",
+  "OSVersion": "8.1",
+  "browserName": null,
+  "browserVersion": null,
+  "engineName": null,
+  "engineVersion": null,
+  "fullBrowserVersion": null,
+  "mobileModel": null,
+  "mobileVendor": null,
+  "viewportHeight": null,
+  "viewportWidth": null,
+}
+`;
+
 exports[`Check if the state is mutated correctly Initial state 1`] = `
 Object {
   "OSName": null,
@@ -13,6 +173,22 @@ Object {
   "mobileVendor": null,
   "viewportHeight": null,
   "viewportWidth": null,
+}
+`;
+
+exports[`Check if the state is mutated correctly UPDATE_VIEWPORT_DIMENSIONS 1`] = `
+Object {
+  "OSName": null,
+  "OSVersion": null,
+  "browserName": null,
+  "browserVersion": null,
+  "engineName": null,
+  "engineVersion": null,
+  "fullBrowserVersion": null,
+  "mobileModel": null,
+  "mobileVendor": null,
+  "viewportHeight": 512,
+  "viewportWidth": 1024,
 }
 `;
 

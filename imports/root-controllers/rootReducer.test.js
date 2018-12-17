@@ -1,59 +1,39 @@
 import rootReducer from './rootReducer';
 import {
-  updateViewportDimensions,
-  getBrowserInfo,
-  getEngineInfo,
-  getMobileInfo,
-  getOSInfo,
-} from './rootActions';
+  UPDATE_VIEWPORT_DIMENSIONS,
+  GET_BROWSER_INFO,
+  GET_ENGINE_INFO,
+  GET_MOBILE_INFO,
+  GET_OS_INFO,
+} from './rootTypes';
+import createReducerTest from '../../tests/utils/createReducerTest';
 
 describe('Check if the state is mutated correctly', () => {
-  test('Initial state', () => {
-    const action = {
-      type: 'UNRECOGNISED_ACTION',
-    };
-
-    expect(rootReducer(undefined, action)).toMatchSnapshot();
+  createReducerTest(rootReducer, 'Initial state', { type: 'UNRECOGNISED_TYPE' });
+  createReducerTest(rootReducer, UPDATE_VIEWPORT_DIMENSIONS, {
+    type: UPDATE_VIEWPORT_DIMENSIONS,
+    newWidth: 1024,
+    newHeight: 512,
   });
-
-  test('updateViewportDimensions', () => {
-    const newWidth = 1024;
-    const newHeight = 512;
-    const action = updateViewportDimensions(newWidth, newHeight);
-
-    expect(rootReducer(undefined, action)).toMatchSnapshot();
+  createReducerTest(rootReducer, GET_BROWSER_INFO, {
+    type: GET_BROWSER_INFO,
+    browserName: 'Firefox',
+    browserVersion: '63.0',
+    fullBrowserVersion: '63.0.1',
   });
-
-  test('getBrowserInfo', () => {
-    const browserName = 'Firefox';
-    const browserVersion = '63.0';
-    const fullBrowserVersion = '63.0.1';
-    const action = getBrowserInfo(browserName, browserVersion, fullBrowserVersion);
-
-    expect(rootReducer(undefined, action)).toMatchSnapshot();
+  createReducerTest(rootReducer, GET_ENGINE_INFO, {
+    type: GET_ENGINE_INFO,
+    engineName: 'Gecko',
+    engineVersion: '1.8.1',
   });
-
-  test('getEngineInfo', () => {
-    const engineName = 'Gecko';
-    const engineVersion = '1.8.1';
-    const action = getEngineInfo(engineName, engineVersion);
-
-    expect(rootReducer(undefined, action)).toMatchSnapshot();
+  createReducerTest(rootReducer, GET_MOBILE_INFO, {
+    type: GET_MOBILE_INFO,
+    mobileVendor: 'Apple',
+    mobileModel: 'iPhone 6s Plus',
   });
-
-  test('getMobileInfo', () => {
-    const mobileVendor = 'Apple';
-    const mobileModel = 'iPhone 6s Plus';
-    const action = getMobileInfo(mobileVendor, mobileModel);
-
-    expect(rootReducer(undefined, action)).toMatchSnapshot();
-  });
-
-  test('getOSInfo', () => {
-    const OSName = 'Windows';
-    const OSVersion = '8.1';
-    const action = getOSInfo(OSName, OSVersion);
-
-    expect(rootReducer(undefined, action)).toMatchSnapshot();
+  createReducerTest(rootReducer, GET_OS_INFO, {
+    type: GET_OS_INFO,
+    OSName: 'Windows',
+    OSVersion: '8.1',
   });
 });
