@@ -12,6 +12,12 @@ Follow the steps to get started:
   git clone https://github.com/WebDeg-Brian/nextjs-starter.git <name of your project>
 ```
 
+- Move inside the project folder
+
+```bash
+  cd <name of your project>
+```
+
 - Install the dependencies:
 
 ```bash
@@ -19,7 +25,16 @@ Follow the steps to get started:
 ```
 
 - Remove `.git` folder
-- Initialise a new `.git` folder
+- Initialise a new `.git` folder (Make sure you have your repo created):
+
+```bash
+  git init
+  git add .
+  git commit -m "First commit"
+  git remote add origin <your remote repo URL>
+  git push -u origin master
+```
+
 - Tweak `package.json` to your likings
 - Run the dev server and start developing straight away!
 
