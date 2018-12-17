@@ -25,7 +25,9 @@ Follow the steps to get started:
 ```
 
 - Remove `.git` folder
-- Initialise a new `.git` folder (Make sure you have your repo created):
+- Tweak `package.json` to your likings
+- Run the dev server and start developing straight away!
+- (Optional) Initialise a new `.git` folder (Make sure you have your repo created):
 
 ```bash
   git init
@@ -34,9 +36,6 @@ Follow the steps to get started:
   git remote add origin <your remote repo URL>
   git push -u origin master
 ```
-
-- Tweak `package.json` to your likings
-- Run the dev server and start developing straight away!
 
 ## Available commands:
 
