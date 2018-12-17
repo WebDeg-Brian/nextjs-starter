@@ -30,6 +30,7 @@ Follow the steps to get started:
 - `npm start`: Start the application in production mode
 - `npm run test`: Run all the tests
 - `npm run test:watch`: Run all the tests in watch mode
+- `npm run snapshot:update`: Update snapshots
 
 ## Dependencies
 
