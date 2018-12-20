@@ -18,7 +18,7 @@ export default withRedux(
     pageContext = getPageContext();
 
     componentDidMount() {
-      const jssStyles = document.querySelector('#Mui-SSR');
+      const jssStyles = document.querySelector('#jss-server-side');
 
       if (jssStyles && jssStyles.parentNode) {
         jssStyles.parentNode.removeChild(jssStyles);

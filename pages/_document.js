@@ -22,7 +22,7 @@ class SiteDocument extends Document {
       styles: (
         <>
           <style
-            id="Mui-SSR"
+            id="jss-server-side"
             // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
               __html: pageContext.sheetsRegistry.toString(),
