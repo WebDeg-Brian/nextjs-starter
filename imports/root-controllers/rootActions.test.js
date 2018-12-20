@@ -9,15 +9,16 @@ import {
 import createActionTest from '../../tests/utils/createActionTest';
 
 const store = configureStore()();
+const actionTest = createActionTest(store);
 
 describe('Check if actions return correct payloads', () => {
   beforeEach(() => {
     store.clearActions();
   });
 
-  createActionTest(store, 'updateViewportDimensions', updateViewportDimensions, [1024, 512]);
-  createActionTest(store, 'getBrowserInfo', getBrowserInfo, ['Firefox', '63.0', '63.0.1']);
-  createActionTest(store, 'getEngineInfo', getEngineInfo, ['Gecko', '1.8.1']);
-  createActionTest(store, 'getMobileInfo', getMobileInfo, ['Apple', 'iPhone 6s Plus']);
-  createActionTest(store, 'getOSInfo', getOSInfo, ['Windows', '8.1']);
+  actionTest('updateViewportDimensions', updateViewportDimensions, [1024, 512]);
+  actionTest('getBrowserInfo', getBrowserInfo, ['Firefox', '63.0', '63.0.1']);
+  actionTest('getEngineInfo', getEngineInfo, ['Gecko', '1.8.1']);
+  actionTest('getMobileInfo', getMobileInfo, ['Apple', 'iPhone 6s Plus']);
+  actionTest('getOSInfo', getOSInfo, ['Windows', '8.1']);
 });
