@@ -6,8 +6,8 @@ import { JssProvider } from 'react-jss';
 import { Provider } from 'react-redux';
 import NProgress from 'nprogress';
 import Router from 'next/router';
-import withRedux from '../imports/utils/withRedux';
-import getPageContext from '../imports/utils/getPageContext';
+import withRedux from '../src/utils/withRedux';
+import getPageContext from '../src/utils/getPageContext';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());

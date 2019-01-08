@@ -11,31 +11,33 @@ import {
   osName as OSName,
   osVersion as OSVersion,
 } from 'react-device-detect';
-import { rootActions } from '../root-controllers';
+import { actions } from '../root-controllers';
 import { connect } from 'react-redux';
 import getDisplayName from './getDisplayName';
 
 export default Page => {
   class withInitialState extends Component {
-    componentDidMount() {
-      this.updateViewportDimensions();
-      window.addEventListener('resize', this.updateViewportDimensions, false);
+    static async getInitialProps(pageContext) {
+      let pageProps = {};
 
+      if (typeof Page.getInitialProps === 'function') {
+        pageProps = await Page.getInitialProps(pageContext);
+      }
+
+      return {
+        ...pageProps,
+      };
+    }
+
+    componentDidMount() {
       this.props.getBrowserInfo(browserName, browserVersion, fullBrowserVersion);
       this.props.getEngineInfo(engineName, engineVersion);
       this.props.getMobileInfo(mobileVendor, mobileModel);
       this.props.getOSInfo(OSName, OSVersion);
     }
 
-    updateViewportDimensions = () => {
-      const newWidth = document.documentElement.clientWidth,
-        newHeight = document.documentElement.clientHeight;
-
-      this.props.updateViewportDimensions(newWidth, newHeight);
-    };
-
     render() {
-      return <Page />;
+      return <Page {...this.props} />;
     }
   }
 
@@ -44,13 +46,12 @@ export default Page => {
     getEngineInfo: PropTypes.func.isRequired,
     getMobileInfo: PropTypes.func.isRequired,
     getOSInfo: PropTypes.func.isRequired,
-    updateViewportDimensions: PropTypes.func.isRequired,
   };
 
   withInitialState.displayName = getDisplayName('withInitialState', Page);
 
   return connect(
     null,
-    rootActions,
+    actions,
   )(withInitialState);
 };

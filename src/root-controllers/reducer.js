@@ -1,20 +1,8 @@
-import {
-  UPDATE_VIEWPORT_DIMENSIONS,
-  GET_BROWSER_INFO,
-  GET_ENGINE_INFO,
-  GET_MOBILE_INFO,
-  GET_OS_INFO,
-} from './rootTypes';
-import rootInitialState from './rootInitialState';
+import { GET_BROWSER_INFO, GET_ENGINE_INFO, GET_MOBILE_INFO, GET_OS_INFO } from './types';
+import initialState from './initialState';
 
-export default (state = rootInitialState, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
-    case UPDATE_VIEWPORT_DIMENSIONS:
-      return {
-        ...state,
-        viewportWidth: action.newWidth,
-        viewportHeight: action.newHeight,
-      };
     case GET_BROWSER_INFO:
       return {
         ...state,

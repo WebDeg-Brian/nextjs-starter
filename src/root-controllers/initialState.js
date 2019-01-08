@@ -1,6 +1,4 @@
 export default {
-  viewportWidth: null,
-  viewportHeight: null,
   browserName: null,
   browserVersion: null,
   fullBrowserVersion: null,

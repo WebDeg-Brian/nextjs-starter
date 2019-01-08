@@ -1,5 +1,5 @@
 import React from 'react';
-import withInitialState from '../imports/utils/withInitialState';
+import withInitialState from '../src/utils/withInitialState';
 
 const Index = () => <div>Hello World</div>;
 
